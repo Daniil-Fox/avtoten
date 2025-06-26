@@ -1,0 +1,364 @@
+.title1 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 124%;
+  color: var(--chernyy-100);
+
+  @include small-tablet {
+    font-size: 4rem;
+  }
+  @include mobile {
+    font-size: 3.4rem;
+  }
+}
+.title2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 3.6rem;
+  line-height: 122%;
+  color: var(--chernyy-100);
+  @include small-tablet {
+    font-size: 3rem;
+  }
+  @include mobile {
+    font-size: 2.4rem;
+  }
+  &--light {
+    color: var(--belyy);
+  }
+}
+.title3 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 125%;
+  color: var(--chernyy-100);
+  @include small-tablet {
+    font-size: 2rem;
+  }
+  @include mobile {
+    font-size: 1.8rem;
+  }
+  &--light {
+    color: var(--belyy);
+  }
+}
+
+.desc1 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 133%;
+  color: var(--chernyy-100);
+
+  &--light {
+    color: var(--belyy);
+  }
+
+  &--500 {
+    font-weight: 500;
+  }
+  &--400 {
+    font-weight: 400;
+  }
+
+  span {
+    color: var(--siniy-100);
+  }
+  p {
+    margin: 0;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  b {
+    font-weight: 600;
+  }
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    li {
+      &::before {
+        content: "";
+        display: inline-block;
+        margin-right: 1rem;
+        width: 1px;
+        height: 2rem;
+        background: var(--zelenyy-100);
+        transform: rotate(20deg);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+}
+
+.desc2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 137%;
+  color: var(--chernyy-100);
+
+  &--500 {
+    font-weight: 500;
+  }
+  &--400 {
+    font-weight: 400;
+  }
+  &--light {
+    color: var(--belyy);
+  }
+  span {
+    color: var(--siniy-100);
+  }
+  p {
+    margin: 0;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  b {
+    font-weight: 600;
+  }
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    li {
+      &::before {
+        content: "";
+        display: inline-block;
+        margin-right: 1rem;
+        width: 1px;
+        height: 2rem;
+        background: var(--zelenyy-100);
+        transform: rotate(20deg);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+}
+
+.desc3 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 137%;
+  letter-spacing: 0.02em;
+  color: var(--chernyy-100);
+  &--500 {
+    font-weight: 500;
+  }
+  &--400 {
+    font-weight: 400;
+  }
+  &--light {
+    color: var(--belyy);
+  }
+  span {
+    color: var(--siniy-100);
+  }
+  p {
+    margin: 0;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  b {
+    font-weight: 600;
+  }
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    li {
+      &::before {
+        content: "";
+        display: inline-block;
+        margin-right: 1rem;
+        width: 1px;
+        height: 2rem;
+        background: var(--zelenyy-100);
+        transform: rotate(20deg);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+}
+
+.btn {
+  padding: 1.2rem 2.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.6rem;
+  background-color: var(--siniy-100);
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 146%;
+  letter-spacing: 0.02em;
+  color: var(--belyy);
+
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  &--big {
+    padding: 2.8rem 4rem;
+    font-size: 1.6rem;
+  }
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    stroke: currentColor;
+  }
+  @include hover {
+    background-color: var(--siniy-80);
+  }
+
+  &:focus {
+    outline: none;
+    background-color: var(--siniy-80);
+  }
+
+  &:active {
+    background-color: var(--siniy-100);
+  }
+}
+
+.link-btn {
+  display: inline-block;
+  padding-bottom: 0.4rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 137%;
+  color: var(--chernyy-100);
+  border-bottom: 1px solid var(--siniy-100);
+
+  &--white {
+    color: var(--belyy);
+  }
+}
+
+.btn-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  flex-shrink: 0;
+  border: 1px solid var(--chernyy-10);
+  border-radius: 0.8rem;
+  background: var(--belyy);
+  transition: border-color 0.3s ease-in;
+  @include mobile {
+    width: 4rem;
+    height: 4rem;
+  }
+  svg {
+    fill: none;
+    stroke-linecap: round;
+    stroke: var(--chernyy-100);
+    transition: stroke 0.3s ease-in;
+  }
+
+  &--reverse {
+    transform: rotateZ(180deg);
+  }
+
+  @include hover {
+    svg {
+      stroke: var(--siniy-100);
+    }
+  }
+  &:focus {
+    outline: none;
+    svg {
+      stroke: var(--siniy-100);
+    }
+  }
+  &:active {
+    border-color: var(--siniy-20);
+    svg {
+      stroke: var(--siniy-100);
+    }
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  li {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 137%;
+    color: var(--chernyy-30);
+    &::before {
+      content: "";
+      display: inline-block;
+      margin-right: 1rem;
+      width: 1px;
+      height: 2rem;
+      background: var(--zelenyy-100);
+      transform: rotate(20deg);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &--row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4rem;
+    li {
+      &:not(:last-child) {
+        margin-bottom: 0rem;
+      }
+    }
+  }
+
+  &--red {
+    li {
+      &::before {
+        background: var(--krasnyy-100);
+      }
+    }
+  }
+
+  &--light {
+    li {
+      color: var(--chernyy-30);
+    }
+  }
+}

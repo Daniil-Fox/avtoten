@@ -1,0 +1,30 @@
+.nav {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__item a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 137%;
+    color: var(--chernyy-30);
+
+    &::after {
+      content: "";
+      width: 1.6rem;
+      height: 1.6rem;
+      flex-shrink: 0;
+
+      background-image: url("./../img/svg/arr-down.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: rotateZ(-90deg);
+    }
+  }
+}

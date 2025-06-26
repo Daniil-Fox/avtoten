@@ -1,0 +1,59 @@
+.personal {
+  margin-bottom: 9rem;
+  &__title {
+    margin-bottom: 3.2rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.p-item {
+  border: 1px solid var(--chernyy-10);
+  border-radius: 1.6rem;
+  background: var(--belyy);
+  padding: 0.8rem;
+  &__img {
+    height: 20.5rem;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    padding: 2.4rem;
+    padding-top: 1.2rem;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 125%;
+    color: var(--chernyy-100);
+
+    span {
+      display: block;
+      line-height: 123%;
+      font-size: 2.6rem;
+      color: var(--chernyy-20);
+    }
+  }
+
+  &--polog {
+    .p-item__title span {
+      display: inline;
+    }
+  }
+}

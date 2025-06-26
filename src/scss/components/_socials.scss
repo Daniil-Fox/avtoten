@@ -1,0 +1,30 @@
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    li {
+      width: 2rem;
+      height: 2rem;
+
+      a,
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__text {
+    span {
+      font-weight: 600;
+      color: var(--zelenyy-100);
+    }
+  }
+}

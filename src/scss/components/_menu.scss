@@ -1,0 +1,71 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 137%;
+  color: var(--chernyy-100);
+  &__item {
+    position: relative;
+    padding-bottom: 1.4rem;
+    &--dropdown {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      &::after {
+        content: "";
+        display: block;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-image: url("./../img/svg/arr-down.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &.active {
+        & > ul {
+          padding: 1.2rem 2.4rem;
+        }
+      }
+    }
+    & > ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      white-space: nowrap;
+      position: absolute;
+      z-index: 4;
+      top: calc(100% + 0.5rem);
+      left: 0;
+      padding: 0rem 2.4rem;
+      border-radius: 0.6rem;
+      box-shadow: 0 15px 20px 0 rgba(0, 2, 22, 0.1);
+      background: var(--belyy);
+
+      max-height: 0;
+      overflow: hidden;
+      will-change: max-height, padding;
+      transition: max-height 0.3s ease-in, padding 0.3s ease-in;
+
+      li {
+        padding: 0;
+      }
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+}

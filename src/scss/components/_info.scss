@@ -1,0 +1,38 @@
+.info {
+  margin-bottom: 9rem;
+  @include small-tablet {
+    margin-bottom: 6rem;
+  }
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
+    span {
+      color: var(--chernyy-20);
+    }
+
+    &--small {
+      span {
+        color: var(--siniy-100);
+      }
+    }
+  }
+  &__desc {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+    }
+  }
+}

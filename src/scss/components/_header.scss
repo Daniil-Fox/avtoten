@@ -1,0 +1,236 @@
+.header {
+  position: relative;
+  z-index: 20;
+  @include mobile {
+    padding: 2rem 0;
+  }
+  &__top {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      padding: 0;
+    }
+  }
+
+  &__buttons {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  &__tel {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 125%;
+    color: var(--chernyy-100);
+
+    span {
+      color: var(--siniy-100);
+    }
+
+    &--white {
+      color: var(--belyy);
+    }
+  }
+  &__tt {
+    display: block;
+    width: 5.6rem;
+    height: 5.6rem;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+  &__btn {
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      margin-left: auto;
+    }
+  }
+  &__socials {
+    @include small-tablet {
+      display: none;
+    }
+
+    &--mob {
+      display: none;
+      @include small-tablet {
+        display: flex;
+      }
+    }
+  }
+  &__menu {
+    background-color: var(--belyy);
+    padding: 1.2rem 4rem;
+    padding-bottom: 0;
+    border-radius: 0.6rem;
+  }
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.6rem;
+  @include mobile {
+    gap: 0.8rem;
+  }
+  &__logo {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 125%;
+    color: var(--chernyy-20);
+
+    span {
+      color: var(--siniy-100);
+    }
+  }
+
+  &__text {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.6rem;
+    max-width: 25rem;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 146%;
+    letter-spacing: 0.02em;
+    color: var(--chernyy-100);
+    @include mobile {
+      gap: 0.8rem;
+    }
+    &::before {
+      content: " ";
+      display: block;
+      flex-shrink: 0;
+      height: 2rem;
+      width: 2px;
+      background: var(--chernyy-20);
+    }
+  }
+
+  &--white {
+    .logo__text {
+      color: var(--belyy);
+    }
+  }
+}
+
+// Бургер-меню
+.burger {
+  display: none;
+  @include burger;
+  z-index: 30;
+  @include tablet {
+    display: block;
+  }
+  @include mobile {
+    position: absolute;
+    right: 2rem;
+    top: 1.2rem;
+    margin-left: 0;
+  }
+}
+
+.menu__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 20;
+}
+
+.menu--active + .menu__overlay {
+  display: block;
+}
+
+.header__menu {
+  @include tablet {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    max-width: 320px;
+    height: 100vh;
+    background: var(--belyy);
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    z-index: 25;
+    padding: 5rem 1.5rem;
+    border-radius: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &.menu--active {
+    @include tablet {
+      transform: translateX(0);
+    }
+  }
+  @include mobile {
+    padding-top: 5rem;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.menu {
+  @include tablet {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.header__top {
+  @include tablet {
+    gap: 1.8rem;
+  }
+  position: relative;
+  @include mobile {
+    justify-content: flex-start;
+    padding-right: 5.2rem; // под бургер
+  }
+}
+
+.header__right {
+  @include tablet {
+    display: none;
+  }
+}
+
+.socials__text--desktop {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.socials__text--menu,
+.header__link--menu {
+  display: none;
+  @include mobile {
+    display: block;
+    margin: 2rem 0 0 0;
+    text-align: center;
+  }
+}

@@ -2,6 +2,7 @@ import "./_components.js";
 import "./functions/burger.js";
 
 import { validateForms } from "./functions/validate-forms.js";
+import { getHeaderHeight } from "./functions/header-height.js";
 
 function setupModalPopup() {
   const modalBtns = document.querySelectorAll(".modal-btn");
@@ -68,4 +69,38 @@ const afterForm = () => {
   popupThx.classList.add("active");
 };
 
-validateForms(".popup__form", rules1, [], afterForm);
+// validateForms(".popup__form", rules1, [], afterForm);
+
+// Фиксация header при скролле вниз с учетом высоты меню
+function setupFixedHeader() {
+  const header = document.querySelector(".header");
+  if (!header) return;
+
+  // Устанавливаем кастомное свойство с высотой header
+  getHeaderHeight();
+  window.addEventListener("resize", getHeaderHeight);
+
+  let lastScroll = window.scrollY;
+  let isFixed = false;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+    const headerHeight = header.offsetHeight;
+    if (currentScroll > headerHeight) {
+      if (!isFixed) {
+        header.classList.add("fixed");
+        document.body.style.paddingTop = headerHeight + "px";
+        isFixed = true;
+      }
+    } else {
+      if (isFixed) {
+        header.classList.remove("fixed");
+        document.body.style.paddingTop = "";
+        isFixed = false;
+      }
+    }
+    lastScroll = currentScroll;
+  });
+}
+
+document.addEventListener("DOMContentLoaded", setupFixedHeader);

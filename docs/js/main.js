@@ -16175,37 +16175,37 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (function () {
-  const burger = document?.querySelector('[data-burger]');
-  const menu = document?.querySelector('[data-menu]');
-  const menuItems = document?.querySelectorAll('[data-menu-item]');
-  const overlay = document?.querySelector('[data-menu-overlay]');
-  burger?.addEventListener('click', e => {
-    burger?.classList.toggle('burger--active');
-    menu?.classList.toggle('menu--active');
-    if (menu?.classList.contains('menu--active')) {
-      burger?.setAttribute('aria-expanded', 'true');
-      burger?.setAttribute('aria-label', 'Закрыть меню');
-      (0,_functions_disable_scroll_js__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
+  const burger = document?.querySelector("[data-burger]");
+  const menu = document?.querySelector("[data-menu]");
+  const menuItems = document?.querySelectorAll("[data-menu-item]");
+  const overlay = document?.querySelector("[data-menu-overlay]");
+  burger?.addEventListener("click", e => {
+    burger?.classList.toggle("burger--active");
+    menu?.classList.toggle("menu--active");
+    if (menu?.classList.contains("menu--active")) {
+      burger?.setAttribute("aria-expanded", "true");
+      burger?.setAttribute("aria-label", "Закрыть меню");
+      document.body.style.overflow = "hidden";
     } else {
-      burger?.setAttribute('aria-expanded', 'false');
-      burger?.setAttribute('aria-label', 'Открыть меню');
-      (0,_functions_enable_scroll_js__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
+      burger?.setAttribute("aria-expanded", "false");
+      burger?.setAttribute("aria-label", "Открыть меню");
+      document.body.style.overflow = null;
     }
   });
-  overlay?.addEventListener('click', () => {
-    burger?.setAttribute('aria-expanded', 'false');
-    burger?.setAttribute('aria-label', 'Открыть меню');
-    burger.classList.remove('burger--active');
-    menu.classList.remove('menu--active');
-    (0,_functions_enable_scroll_js__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
+  overlay?.addEventListener("click", () => {
+    burger?.setAttribute("aria-expanded", "false");
+    burger?.setAttribute("aria-label", "Открыть меню");
+    burger.classList.remove("burger--active");
+    menu.classList.remove("menu--active");
+    document.body.style.overflow = null;
   });
   menuItems?.forEach(el => {
-    el.addEventListener('click', () => {
-      burger?.setAttribute('aria-expanded', 'false');
-      burger?.setAttribute('aria-label', 'Открыть меню');
-      burger.classList.remove('burger--active');
-      menu.classList.remove('menu--active');
-      (0,_functions_enable_scroll_js__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
+    el.addEventListener("click", () => {
+      burger?.setAttribute("aria-expanded", "false");
+      burger?.setAttribute("aria-label", "Открыть меню");
+      burger.classList.remove("burger--active");
+      menu.classList.remove("menu--active");
+      document.body.style.overflow = null;
     });
   });
 })();
@@ -16270,6 +16270,24 @@ const enableScroll = () => {
   });
   _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.removeAttribute('data-position');
   _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.style.scrollBehavior = 'smooth';
+};
+
+/***/ }),
+
+/***/ "./src/js/functions/header-height.js":
+/*!*******************************************!*\
+  !*** ./src/js/functions/header-height.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getHeaderHeight: () => (/* binding */ getHeaderHeight)
+/* harmony export */ });
+const getHeaderHeight = () => {
+  const headerHeight = document?.querySelector('.header').offsetHeight;
+  document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
 };
 
 /***/ }),
@@ -16425,6 +16443,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_components.js */ "./src/js/_components.js");
 /* harmony import */ var _functions_burger_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/burger.js */ "./src/js/functions/burger.js");
 /* harmony import */ var _functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functions/validate-forms.js */ "./src/js/functions/validate-forms.js");
+/* harmony import */ var _functions_header_height_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./functions/header-height.js */ "./src/js/functions/header-height.js");
+
 
 
 
@@ -16477,7 +16497,39 @@ const afterForm = () => {
   popup.classList.remove("active");
   popupThx.classList.add("active");
 };
-(0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_2__.validateForms)(".popup__form", rules1, [], afterForm);
+
+// validateForms(".popup__form", rules1, [], afterForm);
+
+// Фиксация header при скролле вниз с учетом высоты меню
+function setupFixedHeader() {
+  const header = document.querySelector(".header");
+  if (!header) return;
+
+  // Устанавливаем кастомное свойство с высотой header
+  (0,_functions_header_height_js__WEBPACK_IMPORTED_MODULE_3__.getHeaderHeight)();
+  window.addEventListener("resize", _functions_header_height_js__WEBPACK_IMPORTED_MODULE_3__.getHeaderHeight);
+  let lastScroll = window.scrollY;
+  let isFixed = false;
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+    const headerHeight = header.offsetHeight;
+    if (currentScroll > headerHeight) {
+      if (!isFixed) {
+        header.classList.add("fixed");
+        document.body.style.paddingTop = headerHeight + "px";
+        isFixed = true;
+      }
+    } else {
+      if (isFixed) {
+        header.classList.remove("fixed");
+        document.body.style.paddingTop = "";
+        isFixed = false;
+      }
+    }
+    lastScroll = currentScroll;
+  });
+}
+document.addEventListener("DOMContentLoaded", setupFixedHeader);
 })();
 
 /******/ })()

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>AVTOTENT</title>
+  <link rel="preload" href="fonts/InterTight-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+  <body class="page__body">
+    <div class="site-container">
+      <header class="header">
+  <div class="container">
+    <div class="header__top">
+      <div class="header__logo logo">
+        <a href="./" class="logo__logo"> Транс<span>Тент</span> </a>
+        <div class="logo__text">
+          Производство и ремонт автотентов грузовых автомобилей
+        </div>
+      </div>
+
+      <button class="btn btn-reset header__btn modal-btn">Оставить заявку</button>
+
+      <div class="header__socials socials">
+        <ul class="socials__list list-reset">
+          <li>
+            <a href="#" target="_blank">
+              <img src="./img/svg/tg.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="./img/svg/whatsapp.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+        <div class="socials__text desc3 desc3--400 socials__text--desktop">
+          мы сейчас <span>online</span>
+        </div>
+      </div>
+
+      <div class="header__right">
+        <div class="header__tt">
+          <img src="./img/svg/247.svg" alt="" />
+        </div>
+        <div class="header__buttons">
+          <div>
+            <a href="tel:+74959616862" class="header__tel">+7 495 <span>961-68-62</span></a>
+          </div>
+          <button class="btn-reset link-btn header__link modal-btn">
+            заказать звонок
+          </button>
+        </div>
+      </div>
+
+      <button class="burger" data-burger aria-label="Открыть меню" aria-expanded="false">
+        <span class="burger__line"></span>
+      </button>
+    </div>
+    <nav class="header__menu" data-menu>
+      <ul class="menu">
+        <li class="menu__item" data-menu-item>
+          <a href="./repair-tent.html">Пошив автотентов</a>
+        </li>
+        <li class="menu__item" data-menu-item>
+          <a href="./repair-tent.html">Ремонт автотентов</a>
+        </li>
+        <li class="menu__item" data-menu-item>
+          <a href="./repair-pric.html">Ремонт прицепов</a>
+        </li>
+        <li class="menu__item menu__item--dropdown" data-menu-item>
+          <a href="./work.html">Наши работы </a>
+          <ul class="menu__submenu">
+            <li class="menu__item"><a href="./repair-tent.html">Пошив автотентов</a></li>
+            <li class="menu__item"><a href="./repair-tent.html">Ремонт автотентов</a></li>
+            <li class="menu__item"><a href="./repair-pric.html">Ремонт прицепов</a></li>
+          </ul>
+        </li>
+        <li class="menu__item" data-menu-item><a href="./blog.html">Блог</a></li>
+        <li class="menu__item" data-menu-item><a href="./contacts.html">Контакты</a></li>
+      </ul>
+      <div class="header__socials header__socials--mob socials">
+        <ul class="socials__list list-reset">
+          <li>
+            <a href="#" target="_blank">
+              <img src="./img/svg/tg.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="./img/svg/whatsapp.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+        <div class="socials__text desc3 desc3--400 socials__text--desktop">
+          мы сейчас <span>online</span>
+        </div>
+      </div>
+
+      <div class="menu__overlay" data-menu-overlay></div>
+    </nav>
+  </div>
+</header>
+<div class="popup popup--form">
+  <div class="popup__overlay"></div>
+  <div class="popup__window">
+    <button class="btn-reset popup__close" type="button" aria-label="Закрыть">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.5 1.5L1.5 14.5M1.5 1.5L14.5 14.5" stroke="white" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+    <form class="popup__form">
+      <h2 class="popup__title title2"> Оставить заявку</h2>
+      <p class="desc2 desc2--400 popup__desc">
+        уточняющие текст
+      </p>
+      <form action="#" class="form popup__form">
+        <label class="form__label">
+          <input class="form__input input-name" type="text" name="name" placeholder="Имя">
+        </label class="form__label">
+        <label class="form__label">
+          <input class="form__input input-tel" type="tel" name="phone" placeholder="Ваш телефон">
+        </label>
+        <button type="submit" class="btn btn-reset btn--big form__btn">Оставить заявку</button>
+      </form>
+      <div class="popup__note desc2 desc2--400 centered">свяжемся с Вами в течение 20 минут</div>
+    </form>
+  </div>
+</div>
+<div class="popup popup--thx">
+  <div class="popup__overlay"></div>
+  <div class="popup__window">
+    <button class="btn-reset popup__close" type="button" aria-label="Закрыть">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.5 1.5L1.5 14.5M1.5 1.5L14.5 14.5" stroke="white" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+    <form class="popup__form">
+      <h2 class="popup__title title2"> Заявка отправлена</h2>
+      <p class="desc2 desc2--400 popup__note">
+        свяжемся с Вами в течении 20 минут
+      </p>
+
+  </div>
+</div>
+      <main class="main">
+        <section class="hero hero--tent">
+  <div class="container">
+    <div class="hero__container">
+      <div class="hero__content">
+        <h1 class="hero__title">
+          <div class="hero__title-inner">
+            ремонт тентов
+
+            <div class="hero__disc">
+              <span>скидка 10%</span>
+              для новых клиентов
+            </div>
+          </div>
+        </h1>
+        <p class="hero__subtitle">НА&nbsp;ГРУЗОВИКАХ И&nbsp;ПОЛУПРИЦЕПАХ</p>
+        <ul class="list list--row hero__list">
+          <li>от 1500&nbsp;руб.</li>
+          <li>от 1-го&nbsp;дня</li>
+          <li>работает с&nbsp;2018</li>
+        </ul>
+        <button class="btn-reset btn btn--big hero__btn  modal-btn">
+          Оставить заявку
+
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arr-right"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="hero__img">
+        <picture>
+          <source srcset="./img/hero-tent.webp" type="image/webp" />
+          <img loading="lazy" src="./img/hero-tent.png" class="image" width="835" height="441"
+            alt="Фото грузовика с тентом" />
+        </picture>
+      </div>
+    </div>
+
+    <div class="hero__benefits">
+      <div class="hero__ben ben">
+        <div class="ben__icon">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#shield-cross"></use>
+          </svg>
+        </div>
+        <p class="desc1 ben__title">Аварийные автомобили</p>
+      </div>
+      <div class="hero__ben ben">
+        <div class="ben__icon">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#sword"></use>
+          </svg>
+        </div>
+        <p class="desc1 ben__title">Порезы, протертости</p>
+      </div>
+      <div class="hero__ben ben">
+        <div class="ben__icon">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#drop"></use>
+          </svg>
+        </div>
+        <p class="desc1 ben__title">
+          Любые течи по всей площади тентовых&nbsp;конструкций
+        </p>
+      </div>
+    </div>
+  </div>
+</section> <section class="text">
+  <div class="container">
+    <div class="text__container">
+      <div class="text__desc desc2 desc2--400">
+        <p>
+          Услуга &laquo;Ремонт авто тентов&raquo; включает в&nbsp;себя комплекс
+          работ по&nbsp;восстановлению, починке и&nbsp;обслуживанию тентовых
+          покрытий для автомобилей, прицепов, фургона, грузовой
+          и&nbsp;специальной техники. Специалисты нашего сервиса выполняют
+          диагностику состояния автотента, выявляют повреждения любой сложности
+          &mdash; порезы, проколы, износ ткани, сломанные замки
+          и&nbsp;оторванные крепления. После осмотра подбираются оптимальные
+          методы ремонта: ликвидация дыр и&nbsp;разрывов, реставрация швов,
+          замена изношенных элементов (люверсы, ремни, молнии), армирование
+          слабых мест и&nbsp;полная герметизация покрытия. Мы&nbsp;используем
+          современные материалы, совместимые с&nbsp;ПВХ и&nbsp;тентовыми
+          тканями, что гарантирует прочность и долговечность восстановленного
+          изделия. В&nbsp;нашем арсенале&nbsp;&mdash; все необходимое
+          оборудование для выполнения ремонта как в&nbsp;стационарных условиях,
+          так и&nbsp;с&nbsp;выездом на&nbsp;место стоянки автомобиля. аждый
+          заказ сопровождается консультацией, быстрой оценкой стоимости
+          и&nbsp;сроков работ.
+        </p>
+      </div>
+
+      <div class="text__img">
+        <picture>
+          <source srcset="./img/banner2.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="./img/banner2.jpg"
+            class="image"
+            width="380"
+            height="242"
+            alt="Фото тента"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="cost">
+  <div class="container">
+    <div class="cost__block">
+      <h2 class="title1 cost__title">Стоимость ремонта тентов</h2>
+      <table class="cost__table table">
+        <colgroup>
+          <col />
+          <col />
+          <col />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>услуга</th>
+            <th>критерии</th>
+            <th>цена</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ремонт тента (бок) - прямой порез</td>
+            <td>1 п/м на 10 см</td>
+            <td>700 руб.</td>
+          </tr>
+          <tr>
+            <td>Ремонт тента</td>
+            <td>1 п/м на 10 см</td>
+            <td>700 руб.</td>
+          </tr>
+          <tr>
+            <td>Дополнительный ремонт тента</td>
+            <td>1 м.кв.</td>
+            <td>500 руб.</td>
+          </tr>
+          <tr>
+            <td>Снятие тента</td>
+            <td>до 6 метров</td>
+            <td>800 руб.</td>
+          </tr>
+          <tr>
+            <td>Надеть тент</td>
+            <td>до 6 метров</td>
+            <td>1200 руб.</td>
+          </tr>
+          <tr>
+            <td>Снятие тента</td>
+            <td>6,5-8 метров</td>
+            <td>1200 руб.</td>
+          </tr>
+          <tr>
+            <td>Ремонт тента</td>
+            <td>1 п/м на 10 см</td>
+            <td>700 руб.</td>
+          </tr>
+          <tr>
+            <td>Дополнительный ремонт тента</td>
+            <td>1 м.кв.</td>
+            <td>500 руб.</td>
+          </tr>
+          <tr>
+            <td>Снятие тента</td>
+            <td>до 6 метров</td>
+            <td>800 руб.</td>
+          </tr>
+          <tr>
+            <td>Надеть тент</td>
+            <td>до 6 метров</td>
+            <td>1200 руб.</td>
+          </tr>
+          <tr>
+            <td>Снятие тента</td>
+            <td>6,5-8 метров</td>
+            <td>1200 руб.</td>
+          </tr>
+          <tr>
+            <td>Ремонт тента</td>
+            <td>1 п/м на 10 см</td>
+            <td>700 руб.</td>
+          </tr>
+          <tr>
+            <td>Дополнительный ремонт тента</td>
+            <td>1 м.кв.</td>
+            <td>500 руб.</td>
+          </tr>
+          <tr>
+            <td>Снятие тента</td>
+            <td>до 6 метров</td>
+            <td>800 руб.</td>
+          </tr>
+          <tr>
+            <td>Надеть тент</td>
+            <td>до 6 метров</td>
+            <td>1200 руб.</td>
+          </tr>
+          <tr>
+            <td>Снятие тента</td>
+            <td>6,5-8 метров</td>
+            <td>1200 руб.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cost__desc desc2 desc2--400">
+      <p>
+        Мы&nbsp;используем современные материалы, совместимые с&nbsp;ПВХ
+        и&nbsp;тентовыми тканями, что гарантирует прочность и долговечность
+        восстановленного изделия. В&nbsp;нашем арсенале&nbsp;&mdash; все
+        необходимое оборудование для выполнения ремонта как в&nbsp;стационарных
+        условиях, так и&nbsp;с&nbsp;выездом на&nbsp;место стоянки автомобиля.
+        аждый заказ сопровождается консультацией, быстрой оценкой стоимости
+        и&nbsp;сроков работ. Наш опыт позволяет оперативно возвращать авто тенты
+        в рабочее состояние, продлевая срок их&nbsp;службы. На&nbsp;все работы
+        предоставляется гарантия, подтверждающая наше качество
+        и&nbsp;ответственность. Заказывая ремонт авто ента у&nbsp;нас,
+        вы&nbsp;получаете профессиональное восстановление тента, его
+        герметичность и&nbsp;надежную защиту груза в&nbsp;любых условиях
+        эксплуатации.
+      </p>
+    </div>
+  </div>
+</section>
+ <section class="work">
+  <div class="container">
+    <div class="work__header">
+      <h2 class="title1 work__title">Наши работы</h2>
+
+      <div class="work__control">
+        <button class="btn-reset btn-arrow work__arr work__arr--prev">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arr-down"></use>
+          </svg>
+        </button>
+        <button class="btn-reset btn-arrow work__arr work__arr--next">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arr-down"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="work__slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="work__item">
+            <img src="" alt="Работа 1" class="work__img" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="work__item">
+            <img src="" alt="Работа 2" class="work__img" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="work__item">
+            <img src="" alt="Работа 3" class="work__img" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="work__item">
+            <img src="" alt="Работа 4" class="work__img" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="work__item">
+            <img src="" alt="Работа 5" class="work__img" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="faq">
+  <div class="container faq__container">
+    <h2 class="faq__title title1 centered">Часто задаваемые вопросы</h2>
+    <ul class="list-reset faq__items">
+      <li class="faq__item faq-item">
+        <div class="faq-item__header">
+          <p class="faq-item__question desc1">
+            Комплексный ремонт и ТО автомобилей
+          </p>
+          <button class="btn-reset faq-item__btn btn-arrow">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#arr-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-item__body">
+          <div class="faq-item__content">
+            <div class="faq-item__header faq-item__header--answer">
+              <p class="desc1 faq-item__capture">
+                Сервис ремонта автотентов в Москве “АвтоТентСервис” 
+              </p>
+              <button
+                class="btn-reset faq-item__btn btn-arrow btn-arrow--reverse"
+              >
+                <svg class="">
+                  <use xlink:href="img/sprite.svg#arr-down"></use>
+                </svg>
+              </button>
+            </div>
+            <p class="desc3 desc3--400 faq-item__desc">
+              Мы оказываем комплексное техобслуживание грузовых машин и фур, а
+              также прицепов и полуприцепов. Если ваш автомобиль имеет
+              технические неполадки, нуждается в ремонте и техническом
+              обслуживании — позвоните нам или оставьте заявку на сайте.
+            </p>
+          </div>
+        </div>
+      </li>
+      <li class="faq__item faq-item">
+        <div class="faq-item__header">
+          <p class="faq-item__question desc1">
+            Ремонт прицепов и полуприцепов в Москве
+          </p>
+          <button class="btn-reset faq-item__btn btn-arrow">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#arr-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-item__body">
+          <div class="faq-item__content">
+            <div class="faq-item__header faq-item__header--answer">
+              <p class="desc1 faq-item__capture">
+                Сервис ремонта автотентов в Москве “АвтоТентСервис” 
+              </p>
+              <button
+                class="btn-reset faq-item__btn btn-arrow btn-arrow--reverse"
+              >
+                <svg class="">
+                  <use xlink:href="img/sprite.svg#arr-down"></use>
+                </svg>
+              </button>
+            </div>
+            <p class="desc3 desc3--400 faq-item__desc">
+              Мы оказываем комплексное техобслуживание грузовых машин и фур, а
+              также прицепов и полуприцепов. Если ваш автомобиль имеет
+              технические неполадки, нуждается в ремонте и техническом
+              обслуживании — позвоните нам или оставьте заявку на сайте.
+            </p>
+          </div>
+        </div>
+      </li>
+      <li class="faq__item faq-item">
+        <div class="faq-item__header">
+          <p class="faq-item__question desc1">
+            Ремонт каркасов для грузовых автомобилей и прицепов в Москве
+          </p>
+          <button class="btn-reset faq-item__btn btn-arrow">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#arr-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-item__body">
+          <div class="faq-item__content">
+            <div class="faq-item__header faq-item__header--answer">
+              <p class="desc1 faq-item__capture">
+                Сервис ремонта автотентов в Москве “АвтоТентСервис” 
+              </p>
+              <button
+                class="btn-reset faq-item__btn btn-arrow btn-arrow--reverse"
+              >
+                <svg class="">
+                  <use xlink:href="img/sprite.svg#arr-down"></use>
+                </svg>
+              </button>
+            </div>
+            <p class="desc3 desc3--400 faq-item__desc">
+              Мы оказываем комплексное техобслуживание грузовых машин и фур, а
+              также прицепов и полуприцепов. Если ваш автомобиль имеет
+              технические неполадки, нуждается в ремонте и техническом
+              обслуживании — позвоните нам или оставьте заявку на сайте.
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+ <section class="info">
+  <div class="container">
+    <div class="info__container">
+      <div class="info__content">
+        <h2 class="title2 info__title">
+          Ремонт и изготовление <span>автотентов</span> в Москве
+        </h2>
+
+        <div class="desc2 desc2--400 info__desc">
+          <p>
+            Грузовые автомобили страдают из-за износа тентов. Грузовики разных
+            типов часто оборудованы автотентами на кузове. Это могут быть тенты
+            самых разных конструкций и устанавливаться они могут на кузовах
+            грузовиков, на полуприцепах и прицепах к ним. Главная задача
+            автотента — защита перевозимых грузов от негативного воздействия
+            погодных условий. Этот вид покрытия используется намного чаще, чем
+            цельнометаллический кузов. Он намного легче и оказывает меньшее
+            давление на подвеску автомобиля. Современная конструкция
+            автомобильного тента на грузовых машинах и полуприцепах имеет
+            сдвижные опоры. <span>Большинство полуприцепов</span> европейского
+            типаоборудуется четырехсекторным тентом и при боковой загрузке 3
+            стойки из 4 сдвигаются. Для их сдвижения в конструкции предусмотрены
+            специальные ролики. Еще одно достоинство тента на кузов грузового
+            автомобиля — стоимость его ниже, чем цельнометаллический кузов. Но,
+            при этом, автотент имеет свойство со временем изнашиваться. Компания
+            “АвтоТентСервис” в Москве производит ремонт автомобильных тентов, а
+            также их пошив на заказ, монтаж каркасов, ремонт прицепов и
+            полуприцепов, ремонт и техобслуживание грузовых и легковых
+            автомобилей. 
+          </p>
+        </div>
+      </div>
+      <div class="info__content">
+        <h2 class="title2 info__title">
+          Изготовление и ремонт автомобильных тентов
+        </h2>
+
+        <div class="desc2 desc2--400 info__desc">
+          <p>
+            Много лет мы работаем с частными водителями, автопарками,
+            транспортными организациями и компаниями-перевозчиками на грузовом
+            транспорте.
+          </p>
+          <p>
+            Автомобильные тенты для грузовых автомобилей и полуприцепов
+            позволяют защитить кузов и перевозимые в нем грузы.
+            <b>Автотенты изготавливаются</b> из брезента или ПВХ. Они устойчивы
+            перед перепадами температур, выдерживают воздействие атмосферных
+            осадков, имеют способность к продуванию и длительной эксплуатации.
+          </p>
+        </div>
+
+        <h3 class="title3 info__title info__title--small">
+          <span>Производит ремонт</span> автомобильных тентов для:
+        </h3>
+        <div class="desc2 desc2--400 info__desc">
+          <ul>
+            <li>фур и полуприцепов;</li>
+            <li>каркасных автомобилей;</li>
+            <li>зерновозов;</li>
+            <li>ГАЗелей;</li>
+          </ul>
+          <p>
+            и других видов транспорта, в которых используется автотент. Срок
+            ремонт составляет всего час. А это значит, что если вы отправляетесь
+            в рейс и ваш автотент пришел в негодность, то вы можете заехать в
+            наш сервис и всего через час ехать дальше. Мы устраняем протертости
+            и порезы, любые течи через тент, а также беремся за ремонт тентов в
+            аварийном состоянии. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="footer__top">
+    <div class="container footer__row">
+      <div class="footer__logo logo logo--white">
+        <a href="./" class="logo__logo"> Транс<span>Тент</span> </a>
+        <div class="logo__text">
+          Производство и ремонт автотентов грузовых автомобилей
+        </div>
+      </div>
+
+      <nav class="footer__nav nav">
+        <ul class="list-reset nav__list">
+          <li class="nav__item">
+            <a href="./repair-tent.html">Пошив автотентов</a>
+          </li>
+          <li class="nav__item">
+            <a href="./repair-tent.html">Ремонт автотентов</a>
+          </li>
+          <li class="nav__item">
+            <a href="./repair-tent.html">Установка автотентов</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="footer__nav nav">
+        <ul class="list-reset nav__list">
+          <li class="nav__item">
+            <a href="./repair-pric.html">Ремонт прицепов</a>
+          </li>
+          <li class="nav__item">
+            <a href="./work.html">Наши работы</a>
+          </li>
+          <li class="nav__item">
+            <a href="./contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__buttons">
+        <div class="header__socials socials">
+          <ul class="socials__list list-reset">
+            <li>
+              <a href="#" target="_blank">
+                <img src="./img/svg/tg.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <img src="./img/svg/whatsapp.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <a href="tel:+74959616862" class="header__tel header__tel--white">+7 495 961-68-62</a>
+        </div>
+        <button class="btn-reset link-btn link-btn--white footer__link modal-btn">
+          заказать звонок
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__row desc3 desc3--400">
+      <small class="footer__link">
+        Информация, размещенная на сайте, не является публичной офертой.
+      </small>
+
+      <small class="footer__link">
+        <a href="#" target="_blank"> Политика </a>
+      </small>
+
+      <small class="footer__link footer__link--white">
+        разработка сайта <a href="#" target="_blank">olpy.ru</a>
+      </small>
+    </div>
+  </div>
+</footer>
+    </div>
+  </body>
+</html>

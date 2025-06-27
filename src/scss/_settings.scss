@@ -5,6 +5,9 @@
 }
 html {
   font-size: calc(100vw / 140);
+  @media (min-width: 1400px) {
+    font-size: 10px;
+  }
   @include small-tablet {
     font-size: calc(100vw / 76);
   }
@@ -118,4 +121,8 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.just-validate-error-label {
+  display: none;
 }

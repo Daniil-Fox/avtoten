@@ -16,6 +16,21 @@
     gap: 0.8rem;
   }
 
+  &__grid {
+    .swiper-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      &:not(:last-child) {
+        margin-bottom: 3.2rem;
+      }
+
+      @include small-tablet {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+
   &__arr {
     svg {
       width: 50%;

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>AVTOTENT</title>
+  <link rel="preload" href="fonts/InterTight-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+  <body class="page__body">
+    <div class="site-container">
+      <header class="header">
+  <div class="container">
+    <div class="header__top">
+      <div class="header__logo logo">
+        <a href="./" class="logo__logo"> Транс<span>Тент</span> </a>
+        <div class="logo__text">
+          Производство и ремонт автотентов грузовых автомобилей
+        </div>
+      </div>
+
+      <button class="btn btn-reset header__btn modal-btn">Оставить заявку</button>
+
+      <div class="header__socials socials">
+        <ul class="socials__list list-reset">
+          <li>
+            <a href="#" target="_blank">
+              <img src="./img/svg/tg.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="./img/svg/whatsapp.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+        <div class="socials__text desc3 desc3--400 socials__text--desktop">
+          мы сейчас <span>online</span>
+        </div>
+      </div>
+
+      <div class="header__right">
+        <div class="header__tt">
+          <img src="./img/svg/247.svg" alt="" />
+        </div>
+        <div class="header__buttons">
+          <div>
+            <a href="tel:+74959616862" class="header__tel">+7 495 <span>961-68-62</span></a>
+          </div>
+          <button class="btn-reset link-btn header__link modal-btn">
+            заказать звонок
+          </button>
+        </div>
+      </div>
+
+      <button class="burger" data-burger aria-label="Открыть меню" aria-expanded="false">
+        <span class="burger__line"></span>
+      </button>
+    </div>
+    <nav class="header__menu" data-menu>
+      <ul class="menu">
+        <li class="menu__item" data-menu-item>
+          <a href="./repair-tent.html">Пошив автотентов</a>
+        </li>
+        <li class="menu__item" data-menu-item>
+          <a href="./repair-tent.html">Ремонт автотентов</a>
+        </li>
+        <li class="menu__item" data-menu-item>
+          <a href="./repair-pric.html">Ремонт прицепов</a>
+        </li>
+        <li class="menu__item menu__item--dropdown" data-menu-item>
+          <a href="./work.html">Наши работы </a>
+          <ul class="menu__submenu">
+            <li class="menu__item"><a href="./repair-tent.html">Пошив автотентов</a></li>
+            <li class="menu__item"><a href="./repair-tent.html">Ремонт автотентов</a></li>
+            <li class="menu__item"><a href="./repair-pric.html">Ремонт прицепов</a></li>
+          </ul>
+        </li>
+        <li class="menu__item" data-menu-item><a href="./blog.html">Блог</a></li>
+        <li class="menu__item" data-menu-item><a href="./contacts.html">Контакты</a></li>
+      </ul>
+      <div class="header__socials header__socials--mob socials">
+        <ul class="socials__list list-reset">
+          <li>
+            <a href="#" target="_blank">
+              <img src="./img/svg/tg.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="./img/svg/whatsapp.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+        <div class="socials__text desc3 desc3--400 socials__text--desktop">
+          мы сейчас <span>online</span>
+        </div>
+      </div>
+
+      <div class="menu__overlay" data-menu-overlay></div>
+    </nav>
+  </div>
+</header>
+<div class="popup popup--form">
+  <div class="popup__overlay"></div>
+  <div class="popup__window">
+    <button class="btn-reset popup__close" type="button" aria-label="Закрыть">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.5 1.5L1.5 14.5M1.5 1.5L14.5 14.5" stroke="white" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+    <form class="popup__form">
+      <h2 class="popup__title title2"> Оставить заявку</h2>
+      <p class="desc2 desc2--400 popup__desc">
+        уточняющие текст
+      </p>
+      <form action="#" class="form popup__form">
+        <label class="form__label">
+          <input class="form__input input-name" type="text" name="name" placeholder="Имя">
+        </label class="form__label">
+        <label class="form__label">
+          <input class="form__input input-tel" type="tel" name="phone" placeholder="Ваш телефон">
+        </label>
+        <button type="submit" class="btn btn-reset btn--big form__btn">Оставить заявку</button>
+      </form>
+      <div class="popup__note desc2 desc2--400 centered">свяжемся с Вами в течение 20 минут</div>
+    </form>
+  </div>
+</div>
+<div class="popup popup--thx">
+  <div class="popup__overlay"></div>
+  <div class="popup__window">
+    <button class="btn-reset popup__close" type="button" aria-label="Закрыть">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.5 1.5L1.5 14.5M1.5 1.5L14.5 14.5" stroke="white" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+    <form class="popup__form">
+      <h2 class="popup__title title2"> Заявка отправлена</h2>
+      <p class="desc2 desc2--400 popup__note">
+        свяжемся с Вами в течении 20 минут
+      </p>
+
+  </div>
+</div>
+      <main class="main">
+        <div class="breadcrumbs container">
+          <ul>
+            <li>
+              <a href="./">главная</a>
+            </li>
+            <li>
+              <span>наши работы</span>
+            </li>
+          </ul>
+        </div>
+
+        <section class="work">
+          <div class="container">
+            <div class="work__header">
+              <h2 class="title1 work__title">Наши работы</h2>
+            </div>
+            <div class="work__grid swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 1" class="work__img" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 2" class="work__img" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 3" class="work__img" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 4" class="work__img" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 5" class="work__img" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 1" class="work__img" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 2" class="work__img" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 3" class="work__img" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 4" class="work__img" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 5" class="work__img" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 1" class="work__img" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 2" class="work__img" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 3" class="work__img" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 4" class="work__img" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 5" class="work__img" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work__item">
+                    <img src="" alt="Работа 1" class="work__img" />
+                  </div>
+                </div>
+              </div>
+
+              <ul class="work__pagination pagination">
+                <li class="prev">
+                  <a href="#">
+                    <svg class="">
+                      <use xlink:href="img/sprite.svg#arr-down"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li><a href="#">01</a></li>
+                <li><a href="#">02</a></li>
+                <li><a href="#">03</a></li>
+                <li><a href="#">04</a></li>
+                <li class="next">
+                  <a href="#">
+                    <svg class="">
+                      <use xlink:href="img/sprite.svg#arr-down"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+  <div class="footer__top">
+    <div class="container footer__row">
+      <div class="footer__logo logo logo--white">
+        <a href="./" class="logo__logo"> Транс<span>Тент</span> </a>
+        <div class="logo__text">
+          Производство и ремонт автотентов грузовых автомобилей
+        </div>
+      </div>
+
+      <nav class="footer__nav nav">
+        <ul class="list-reset nav__list">
+          <li class="nav__item">
+            <a href="./repair-tent.html">Пошив автотентов</a>
+          </li>
+          <li class="nav__item">
+            <a href="./repair-tent.html">Ремонт автотентов</a>
+          </li>
+          <li class="nav__item">
+            <a href="./repair-tent.html">Установка автотентов</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="footer__nav nav">
+        <ul class="list-reset nav__list">
+          <li class="nav__item">
+            <a href="./repair-pric.html">Ремонт прицепов</a>
+          </li>
+          <li class="nav__item">
+            <a href="./work.html">Наши работы</a>
+          </li>
+          <li class="nav__item">
+            <a href="./contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__buttons">
+        <div class="header__socials socials">
+          <ul class="socials__list list-reset">
+            <li>
+              <a href="#" target="_blank">
+                <img src="./img/svg/tg.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <img src="./img/svg/whatsapp.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <a href="tel:+74959616862" class="header__tel header__tel--white">+7 495 961-68-62</a>
+        </div>
+        <button class="btn-reset link-btn link-btn--white footer__link modal-btn">
+          заказать звонок
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__row desc3 desc3--400">
+      <small class="footer__link">
+        Информация, размещенная на сайте, не является публичной офертой.
+      </small>
+
+      <small class="footer__link">
+        <a href="#" target="_blank"> Политика </a>
+      </small>
+
+      <small class="footer__link footer__link--white">
+        разработка сайта <a href="#" target="_blank">olpy.ru</a>
+      </small>
+    </div>
+  </div>
+</footer>
+    </div>
+  </body>
+</html>

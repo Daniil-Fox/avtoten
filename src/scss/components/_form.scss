@@ -1,0 +1,46 @@
+.form {
+  &__label {
+    display: block;
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--chernyy-10);
+    border-radius: 0.8rem;
+    padding: 2rem 2.4rem;
+
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 137%;
+    color: var(--chernyy-100);
+    transition: border-color 0.3s ease-in, color 0.3s ease-in;
+    &::placeholder {
+      color: var(--chernyy-30);
+    }
+    @include hover {
+      border-color: var(--siniy-40);
+    }
+    &:focus {
+      outline: none;
+      border-color: var(--siniy-100);
+    }
+
+    &.just-validate-error-field {
+      border-color: var(--krasnyy-100);
+    }
+    &.just-validate-success-field {
+      border-color: var(--zelenyy-100);
+    }
+  }
+
+  &__btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -6,9 +6,11 @@
   }
   &__container {
     position: relative;
-    margin-bottom: 9rem;
-    @include tablet {
-      margin-bottom: 2rem;
+    &:not(:last-child) {
+      margin-bottom: 9rem;
+      @include tablet {
+        margin-bottom: 2rem;
+      }
     }
   }
   &__title {
@@ -99,6 +101,9 @@
   }
 
   &__list {
+    li {
+      color: var(--chernyy-100);
+    }
     &:not(:last-child) {
       margin-bottom: 4rem;
       @include mobile {
@@ -153,6 +158,49 @@
     border-radius: 8px;
     padding: 2.4rem 2rem;
     background: var(--chernyy-4);
+  }
+
+  &--tent {
+    .hero {
+      &__img {
+        left: 45.4rem;
+        width: 104.6rem;
+        height: 43.3rem;
+
+        @include small-tablet {
+          width: 100%;
+          left: unset;
+          height: auto;
+        }
+      }
+    }
+    .ben {
+      &__icon {
+        svg {
+          stroke: var(--krasnyy-100);
+          stroke-width: 2px;
+        }
+      }
+    }
+  }
+
+  &--pric {
+    .hero {
+      &__title {
+        max-width: 48rem;
+      }
+      &__img {
+        left: 67.7rem;
+        width: 100rem;
+        height: 47.8rem;
+
+        @include small-tablet {
+          width: 100%;
+          left: unset;
+          height: auto;
+        }
+      }
+    }
   }
 }
 

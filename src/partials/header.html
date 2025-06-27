@@ -8,7 +8,7 @@
         </div>
       </div>
 
-      <button class="btn btn-reset header__btn">Оставить заявку</button>
+      <button class="btn btn-reset header__btn modal-btn">Оставить заявку</button>
 
       <div class="header__socials socials">
         <ul class="socials__list list-reset">
@@ -34,46 +34,39 @@
         </div>
         <div class="header__buttons">
           <div>
-            <a href="tel:+74959616862" class="header__tel"
-              >+7 495 <span>961-68-62</span></a
-            >
+            <a href="tel:+74959616862" class="header__tel">+7 495 <span>961-68-62</span></a>
           </div>
-          <button class="btn-reset link-btn header__link">
+          <button class="btn-reset link-btn header__link modal-btn">
             заказать звонок
           </button>
         </div>
       </div>
 
-      <button
-        class="burger"
-        data-burger
-        aria-label="Открыть меню"
-        aria-expanded="false"
-      >
+      <button class="burger" data-burger aria-label="Открыть меню" aria-expanded="false">
         <span class="burger__line"></span>
       </button>
     </div>
     <nav class="header__menu" data-menu>
       <ul class="menu">
         <li class="menu__item" data-menu-item>
-          <a href="#">Пошив автотентов</a>
+          <a href="./repair-tent.html">Пошив автотентов</a>
         </li>
         <li class="menu__item" data-menu-item>
-          <a href="#">Ремонт автотентов</a>
+          <a href="./repair-tent.html">Ремонт автотентов</a>
         </li>
         <li class="menu__item" data-menu-item>
-          <a href="#">Ремонт прицепов</a>
+          <a href="./repair-pric.html">Ремонт прицепов</a>
         </li>
         <li class="menu__item menu__item--dropdown" data-menu-item>
-          <a href="#">Наши работы </a>
+          <a href="./work.html">Наши работы </a>
           <ul class="menu__submenu">
-            <li class="menu__item"><a href="#">Пошив автотентов</a></li>
-            <li class="menu__item"><a href="#">Ремонт автотентов</a></li>
-            <li class="menu__item"><a href="#">Ремонт прицепов</a></li>
+            <li class="menu__item"><a href="./repair-tent.html">Пошив автотентов</a></li>
+            <li class="menu__item"><a href="./repair-tent.html">Ремонт автотентов</a></li>
+            <li class="menu__item"><a href="./repair-pric.html">Ремонт прицепов</a></li>
           </ul>
         </li>
-        <li class="menu__item" data-menu-item><a href="#">Блог</a></li>
-        <li class="menu__item" data-menu-item><a href="#">Контакты</a></li>
+        <li class="menu__item" data-menu-item><a href="./blog.html">Блог</a></li>
+        <li class="menu__item" data-menu-item><a href="./contacts.html">Контакты</a></li>
       </ul>
       <div class="header__socials header__socials--mob socials">
         <ul class="socials__list list-reset">
@@ -97,3 +90,4 @@
     </nav>
   </div>
 </header>
+@include('./popup.html')

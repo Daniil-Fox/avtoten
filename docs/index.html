@@ -6,13 +6,14 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>MaxGraph New Site</title>
-  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <title>AVTOTENT</title>
+  <link rel="preload" href="fonts/InterTight-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
 </head>
-
 
   <body class="page__body">
     <div class="site-container">
@@ -26,7 +27,7 @@
         </div>
       </div>
 
-      <button class="btn btn-reset header__btn">Оставить заявку</button>
+      <button class="btn btn-reset header__btn modal-btn">Оставить заявку</button>
 
       <div class="header__socials socials">
         <ul class="socials__list list-reset">
@@ -52,46 +53,39 @@
         </div>
         <div class="header__buttons">
           <div>
-            <a href="tel:+74959616862" class="header__tel"
-              >+7 495 <span>961-68-62</span></a
-            >
+            <a href="tel:+74959616862" class="header__tel">+7 495 <span>961-68-62</span></a>
           </div>
-          <button class="btn-reset link-btn header__link">
+          <button class="btn-reset link-btn header__link modal-btn">
             заказать звонок
           </button>
         </div>
       </div>
 
-      <button
-        class="burger"
-        data-burger
-        aria-label="Открыть меню"
-        aria-expanded="false"
-      >
+      <button class="burger" data-burger aria-label="Открыть меню" aria-expanded="false">
         <span class="burger__line"></span>
       </button>
     </div>
     <nav class="header__menu" data-menu>
       <ul class="menu">
         <li class="menu__item" data-menu-item>
-          <a href="#">Пошив автотентов</a>
+          <a href="./repair-tent.html">Пошив автотентов</a>
         </li>
         <li class="menu__item" data-menu-item>
-          <a href="#">Ремонт автотентов</a>
+          <a href="./repair-tent.html">Ремонт автотентов</a>
         </li>
         <li class="menu__item" data-menu-item>
-          <a href="#">Ремонт прицепов</a>
+          <a href="./repair-pric.html">Ремонт прицепов</a>
         </li>
         <li class="menu__item menu__item--dropdown" data-menu-item>
-          <a href="#">Наши работы </a>
+          <a href="./work.html">Наши работы </a>
           <ul class="menu__submenu">
-            <li class="menu__item"><a href="#">Пошив автотентов</a></li>
-            <li class="menu__item"><a href="#">Ремонт автотентов</a></li>
-            <li class="menu__item"><a href="#">Ремонт прицепов</a></li>
+            <li class="menu__item"><a href="./repair-tent.html">Пошив автотентов</a></li>
+            <li class="menu__item"><a href="./repair-tent.html">Ремонт автотентов</a></li>
+            <li class="menu__item"><a href="./repair-pric.html">Ремонт прицепов</a></li>
           </ul>
         </li>
-        <li class="menu__item" data-menu-item><a href="#">Блог</a></li>
-        <li class="menu__item" data-menu-item><a href="#">Контакты</a></li>
+        <li class="menu__item" data-menu-item><a href="./blog.html">Блог</a></li>
+        <li class="menu__item" data-menu-item><a href="./contacts.html">Контакты</a></li>
       </ul>
       <div class="header__socials header__socials--mob socials">
         <ul class="socials__list list-reset">
@@ -115,7 +109,50 @@
     </nav>
   </div>
 </header>
+<div class="popup popup--form">
+  <div class="popup__overlay"></div>
+  <div class="popup__window">
+    <button class="btn-reset popup__close" type="button" aria-label="Закрыть">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.5 1.5L1.5 14.5M1.5 1.5L14.5 14.5" stroke="white" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+    <form class="popup__form">
+      <h2 class="popup__title title2"> Оставить заявку</h2>
+      <p class="desc2 desc2--400 popup__desc">
+        уточняющие текст
+      </p>
+      <form action="#" class="form popup__form">
+        <label class="form__label">
+          <input class="form__input input-name" type="text" name="name" placeholder="Имя">
+        </label class="form__label">
+        <label class="form__label">
+          <input class="form__input input-tel" type="tel" name="phone" placeholder="Ваш телефон">
+        </label>
+        <button type="submit" class="btn btn-reset btn--big form__btn">Оставить заявку</button>
+      </form>
+      <div class="popup__note desc2 desc2--400 centered">свяжемся с Вами в течение 20 минут</div>
+    </form>
+  </div>
+</div>
+<div class="popup popup--thx">
+  <div class="popup__overlay"></div>
+  <div class="popup__window">
+    <button class="btn-reset popup__close" type="button" aria-label="Закрыть">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.5 1.5L1.5 14.5M1.5 1.5L14.5 14.5" stroke="white" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+    <form class="popup__form">
+      <h2 class="popup__title title2"> Заявка отправлена</h2>
+      <p class="desc2 desc2--400 popup__note">
+        свяжемся с Вами в течении 20 минут
+      </p>
 
+  </div>
+</div>
       <main class="main">
         <section class="hero">
   <div class="container">
@@ -206,14 +243,7 @@
         <div class="service-item__img">
           <picture>
             <source srcset="./img/service/01.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="./img/service/01.jpg"
-              class="image"
-              width="364"
-              height="205"
-              alt="Фото услуги"
-            />
+            <img loading="lazy" src="./img/service/01.jpg" class="image" width="364" height="205" alt="Фото услуги" />
           </picture>
         </div>
         <div class="service-item__content">
@@ -224,7 +254,7 @@
             <li>пологи для самосвалов</li>
             <li>тенты для легковых машин и прицепов к ним</li>
           </ul>
-          <button class="btn btn-reset service-item__btn">
+          <button class="btn btn-reset service-item__btn  modal-btn">
             Оставить заявку
             <svg class="">
               <use xlink:href="img/sprite.svg#arr-right"></use>
@@ -236,14 +266,7 @@
         <div class="service-item__img">
           <picture>
             <source srcset="./img/service/02.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="./img/service/02.jpg"
-              class="image"
-              width="364"
-              height="205"
-              alt="Фото услуги"
-            />
+            <img loading="lazy" src="./img/service/02.jpg" class="image" width="364" height="205" alt="Фото услуги" />
           </picture>
         </div>
         <div class="service-item__content">
@@ -253,7 +276,7 @@
             <li>порезы, протертости</li>
             <li>любые течи по всей площади тентовых конструкций</li>
           </ul>
-          <button class="btn btn-reset service-item__btn">
+          <button class="btn btn-reset service-item__btn  modal-btn">
             Оставить заявку
             <svg class="">
               <use xlink:href="img/sprite.svg#arr-right"></use>
@@ -265,14 +288,7 @@
         <div class="service-item__img">
           <picture>
             <source srcset="./img/service/03.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="./img/service/03.jpg"
-              class="image"
-              width="364"
-              height="205"
-              alt="Фото услуги"
-            />
+            <img loading="lazy" src="./img/service/03.jpg" class="image" width="364" height="205" alt="Фото услуги" />
           </picture>
         </div>
         <div class="service-item__content">
@@ -283,7 +299,7 @@
             <li>для грузовых автомобилей</li>
             <li>для прицепов легковых автомобилей</li>
           </ul>
-          <button class="btn btn-reset service-item__btn">
+          <button class="btn btn-reset service-item__btn  modal-btn">
             Оставить заявку
             <svg class="">
               <use xlink:href="img/sprite.svg#arr-right"></use>
@@ -294,7 +310,6 @@
     </div>
   </div>
 </section>
-
         <section class="personal">
   <div class="container">
     <h1 class="title1 personal__title">Автомобильный тенты на заказ</h1>
@@ -303,14 +318,8 @@
         <div class="p-item__img">
           <picture>
             <source srcset="./img/personal/01.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="./img/personal/01.jpg"
-              class="image"
-              width="364"
-              height="205"
-              alt="Фото тента на грузовике"
-            />
+            <img loading="lazy" src="./img/personal/01.jpg" class="image" width="364" height="205"
+              alt="Фото тента на грузовике" />
           </picture>
         </div>
         <div class="p-item__content">
@@ -318,7 +327,7 @@
             <span>тенты на</span>
             грузовики
           </p>
-          <button class="btn btn-reset p-item__btn">
+          <button class="btn btn-reset p-item__btn  modal-btn">
             Оставить заявку
             <svg class="">
               <use xlink:href="img/sprite.svg#arr-right"></use>
@@ -330,14 +339,8 @@
         <div class="p-item__img">
           <picture>
             <source srcset="./img/personal/02.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="./img/personal/02.jpg"
-              class="image"
-              width="364"
-              height="205"
-              alt="Фото тента на полуприцепе"
-            />
+            <img loading="lazy" src="./img/personal/02.jpg" class="image" width="364" height="205"
+              alt="Фото тента на полуприцепе" />
           </picture>
         </div>
         <div class="p-item__content">
@@ -345,7 +348,7 @@
             <span>тенты на</span>
             полуприцепы
           </p>
-          <button class="btn btn-reset p-item__btn">
+          <button class="btn btn-reset p-item__btn  modal-btn">
             Оставить заявку
             <svg class="">
               <use xlink:href="img/sprite.svg#arr-right"></use>
@@ -357,14 +360,8 @@
         <div class="p-item__img">
           <picture>
             <source srcset="./img/personal/03.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="./img/personal/03.jpg"
-              class="image"
-              width="364"
-              height="205"
-              alt="Фото тента на легковом прицепе"
-            />
+            <img loading="lazy" src="./img/personal/03.jpg" class="image" width="364" height="205"
+              alt="Фото тента на легковом прицепе" />
           </picture>
         </div>
         <div class="p-item__content">
@@ -372,7 +369,7 @@
             <span>тенты на</span>
             легковые прицепы
           </p>
-          <button class="btn btn-reset p-item__btn">
+          <button class="btn btn-reset p-item__btn  modal-btn">
             Оставить заявку
             <svg class="">
               <use xlink:href="img/sprite.svg#arr-right"></use>
@@ -384,14 +381,8 @@
         <div class="p-item__img">
           <picture>
             <source srcset="./img/personal/04.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="./img/personal/04.jpg"
-              class="image"
-              width="364"
-              height="205"
-              alt="Фото тента на газеле"
-            />
+            <img loading="lazy" src="./img/personal/04.jpg" class="image" width="364" height="205"
+              alt="Фото тента на газеле" />
           </picture>
         </div>
         <div class="p-item__content">
@@ -399,7 +390,7 @@
             <span>тенты на</span>
             газель
           </p>
-          <button class="btn btn-reset p-item__btn">
+          <button class="btn btn-reset p-item__btn  modal-btn">
             Оставить заявку
             <svg class="">
               <use xlink:href="img/sprite.svg#arr-right"></use>
@@ -411,21 +402,15 @@
         <div class="p-item__img">
           <picture>
             <source srcset="./img/personal/05.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="./img/personal/05.jpg"
-              class="image"
-              width="364"
-              height="205"
-              alt="Фото полога на грузовике"
-            />
+            <img loading="lazy" src="./img/personal/05.jpg" class="image" width="364" height="205"
+              alt="Фото полога на грузовике" />
           </picture>
         </div>
         <div class="p-item__content">
           <p class="p-item__title">
             <span>пологи на</span> самосвальные грузовики и полуприцепы
           </p>
-          <button class="btn btn-reset p-item__btn">
+          <button class="btn btn-reset p-item__btn  modal-btn">
             Оставить заявку
             <svg class="">
               <use xlink:href="img/sprite.svg#arr-right"></use>
@@ -437,21 +422,15 @@
         <div class="p-item__img">
           <picture>
             <source srcset="./img/personal/06.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="./img/personal/06.jpg"
-              class="image"
-              width="364"
-              height="205"
-              alt="Фото полога на грузовике"
-            />
+            <img loading="lazy" src="./img/personal/06.jpg" class="image" width="364" height="205"
+              alt="Фото полога на грузовике" />
           </picture>
         </div>
         <div class="p-item__content">
           <p class="p-item__title">
             <span>пологи на</span> самосвал с механизмом накрутки
           </p>
-          <button class="btn btn-reset p-item__btn">
+          <button class="btn btn-reset p-item__btn  modal-btn">
             Оставить заявку
             <svg class="">
               <use xlink:href="img/sprite.svg#arr-right"></use>
@@ -461,21 +440,14 @@
       </div>
     </div>
   </div>
-</section>
- <section class="banner">
+</section> <section class="banner">
   <div class="container">
     <div class="banner__container">
       <div class="banner__img">
         <picture>
           <source srcset="./img/banner.webp" type="image/webp" />
-          <img
-            loading="lazy"
-            src="./img/banner.jpg"
-            class="image"
-            width="376"
-            height="398"
-            alt="Фото тента на грузовике"
-          />
+          <img loading="lazy" src="./img/banner.jpg" class="image" width="376" height="398"
+            alt="Фото тента на грузовике" />
         </picture>
       </div>
       <div class="banner__content">
@@ -525,7 +497,7 @@
           <p class="desc1 desc1--light banner__extra">
             Мы не заставим вас ждать!
           </p>
-          <button class="btn btn--big btn-reset banner__btn">
+          <button class="btn btn--big btn-reset banner__btn  modal-btn">
             Оставить заявку
             <svg class="">
               <use xlink:href="img/sprite.svg#arr-right"></use>
@@ -536,7 +508,6 @@
     </div>
   </div>
 </section>
-
         <section class="price">
   <div class="container">
     <h2 class="title1 price__title">Стоимость изготовления</h2>
@@ -556,14 +527,8 @@
         <div class="price-item__img">
           <picture>
             <source srcset="./img/price/01.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="./img/price/01.jpg"
-              class="image"
-              width="364"
-              height="205"
-              alt="Фото тента Panama 900"
-            />
+            <img loading="lazy" src="./img/price/01.jpg" class="image" width="364" height="205"
+              alt="Фото тента Panama 900" />
           </picture>
         </div>
 
@@ -586,7 +551,7 @@
             </li>
           </ul>
 
-          <button class="btn btn-reset price-item__btn">
+          <button class="btn btn-reset price-item__btn  modal-btn">
             Заказать
             <svg class="">
               <use xlink:href="img/sprite.svg#arr-right"></use>
@@ -608,14 +573,8 @@
         <div class="price-item__img">
           <picture>
             <source srcset="./img/price/02.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="./img/price/02.jpg"
-              class="image"
-              width="364"
-              height="205"
-              alt="Фото тента Panama 900"
-            />
+            <img loading="lazy" src="./img/price/02.jpg" class="image" width="364" height="205"
+              alt="Фото тента Panama 900" />
           </picture>
         </div>
 
@@ -638,7 +597,7 @@
             </li>
           </ul>
 
-          <button class="btn btn-reset price-item__btn">
+          <button class="btn btn-reset price-item__btn  modal-btn">
             Заказать
             <svg class="">
               <use xlink:href="img/sprite.svg#arr-right"></use>
@@ -660,14 +619,8 @@
         <div class="price-item__img">
           <picture>
             <source srcset="./img/price/01.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="./img/price/01.jpg"
-              class="image"
-              width="364"
-              height="205"
-              alt="Фото тента Panama 900"
-            />
+            <img loading="lazy" src="./img/price/01.jpg" class="image" width="364" height="205"
+              alt="Фото тента Panama 900" />
           </picture>
         </div>
 
@@ -690,7 +643,7 @@
             </li>
           </ul>
 
-          <button class="btn btn-reset price-item__btn">
+          <button class="btn btn-reset price-item__btn  modal-btn">
             Заказать
             <svg class="">
               <use xlink:href="img/sprite.svg#arr-right"></use>
@@ -700,8 +653,7 @@
       </div>
     </div>
   </div>
-</section>
- <section class="quality">
+</section> <section class="quality">
   <div class="container">
     <div class="quality__container">
       <h2 class="title1 quality__title">Качество наших материалов</h2>
@@ -762,14 +714,8 @@
       <div class="banner__img">
         <picture>
           <source srcset="./img/banner2.webp" type="image/webp" />
-          <img
-            loading="lazy"
-            src="./img/banner2.jpg"
-            class="image"
-            width="376"
-            height="398"
-            alt="Фото тента на грузовике"
-          />
+          <img loading="lazy" src="./img/banner2.jpg" class="image" width="376" height="398"
+            alt="Фото тента на грузовике" />
         </picture>
       </div>
       <div class="banner__content">
@@ -791,7 +737,7 @@
           </p>
         </div>
         <div>
-          <button class="btn btn--big btn-reset banner__btn">
+          <button class="btn btn--big btn-reset banner__btn  modal-btn">
             Оставить заявку
             <svg class="">
               <use xlink:href="img/sprite.svg#arr-right"></use>
@@ -801,8 +747,7 @@
       </div>
     </div>
   </div>
-</section>
- <section class="work">
+</section> <section class="work">
   <div class="container">
     <div class="work__header">
       <h2 class="title1 work__title">Наши работы</h2>
@@ -1167,13 +1112,13 @@
       <nav class="footer__nav nav">
         <ul class="list-reset nav__list">
           <li class="nav__item">
-            <a href="#">Пошив автотентов</a>
+            <a href="./repair-tent.html">Пошив автотентов</a>
           </li>
           <li class="nav__item">
-            <a href="#">Ремонт автотентов</a>
+            <a href="./repair-tent.html">Ремонт автотентов</a>
           </li>
           <li class="nav__item">
-            <a href="#">Установка автотентов</a>
+            <a href="./repair-tent.html">Установка автотентов</a>
           </li>
         </ul>
       </nav>
@@ -1181,13 +1126,13 @@
       <nav class="footer__nav nav">
         <ul class="list-reset nav__list">
           <li class="nav__item">
-            <a href="#">Ремонт прицепов</a>
+            <a href="./repair-pric.html">Ремонт прицепов</a>
           </li>
           <li class="nav__item">
-            <a href="#">Наши работы</a>
+            <a href="./work.html">Наши работы</a>
           </li>
           <li class="nav__item">
-            <a href="#">Контакты</a>
+            <a href="./contacts.html">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -1208,11 +1153,9 @@
           </ul>
         </div>
         <div>
-          <a href="tel:+74959616862" class="header__tel header__tel--white"
-            >+7 495 961-68-62</a
-          >
+          <a href="tel:+74959616862" class="header__tel header__tel--white">+7 495 961-68-62</a>
         </div>
-        <button class="btn-reset link-btn link-btn--white footer__link">
+        <button class="btn-reset link-btn link-btn--white footer__link modal-btn">
           заказать звонок
         </button>
       </div>
@@ -1234,7 +1177,6 @@
     </div>
   </div>
 </footer>
-
     </div>
   </body>
 </html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+  <script src="https://api-maps.yandex.ru/v3/?apikey=8c9bb3f5-07ef-4aa2-8a70-b84bc9e8879b&lang=ru_RU"></script>
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="breadcrumbs container">
+        <ul>
+          <li>
+            <a href="#">главная</a>
+          </li>
+          <li>
+            <span>контакты</span>
+          </li>
+        </ul>
+      </div>
+
+      <section class="contacts">
+        <div class="container">
+          <h1 class="title1 contacts__title">Контакты</h1>
+
+          <div class="contacts__row">
+            <div class="contacts__item">
+              <p class="contacts__capture desc2 desc--400">отдел продаж:</p>
+              <a href="tel:+74959616862" class="contacts__link contacts__link--tel desc1">+7 495
+                <span>961-68-62</span></a>
+            </div>
+            <div class="contacts__item">
+              <p class="contacts__capture desc2 desc--400">почта:</p>
+              <a href="mailto:dom@domains.ru" class="contacts__link desc1">dom@domains.ru</a>
+            </div>
+            <div class="contacts__item">
+              <p class="contacts__capture desc2 desc--400">режим работы:</p>
+              <p class="desc1 contacts__tt">круглосуточно</p>
+            </div>
+            <div class="contacts__item">
+              <button class="btn btn-reset contacts__btn  modal-btn">
+                Заказать звонок
+              </button>
+            </div>
+          </div>
+
+          <div class="contacts__block">
+            <div class="contacts__heading">
+              <h2 class="title2 contacts__h">Схема проезда</h2>
+
+              <address class="contacts__address desc1 desc1--400">
+                <span class="desc2 desc2--400">наш адрес: </span>
+                125413, г. Москва, ул. Солнечногорская, д. 4
+              </address>
+
+              <a href="#" class="link-btn contacts__link">
+                открыть в Яндекс картах
+              </a>
+            </div>
+
+            <div class="contacts__map" id="map"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
+  <script>
+    initMap();
+
+    async function initMap() {
+      await ymaps3.ready;
+
+      const {
+        YMap,
+        YMapDefaultSchemeLayer,
+        YMapDefaultFeaturesLayer,
+        YMapMarker,
+      } = ymaps3;
+
+      const map = new YMap(
+        document.getElementById("map"),
+
+        {
+          location: {
+            center: [37.515811, 55.856518],
+            zoom: 15,
+          },
+        }
+      );
+
+      map.addChild(new YMapDefaultSchemeLayer());
+      map.addChild(new YMapDefaultFeaturesLayer());
+
+      const markerContainerElement = document.createElement("div");
+      markerContainerElement.classList.add("marker-container");
+
+      const markerElement = document.createElement("div");
+      markerElement.classList.add("marker");
+
+      markerContainerElement.appendChild(markerElement);
+
+      map.addChild(
+        new YMapMarker(
+          {
+            coordinates: [37.515811, 55.856518],
+          },
+          markerContainerElement
+        )
+      );
+    }
+  </script>
+</body>
+
+</html>

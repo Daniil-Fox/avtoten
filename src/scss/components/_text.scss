@@ -1,0 +1,45 @@
+.text {
+  margin-bottom: 9rem;
+  @include small-tablet {
+    margin-bottom: 6rem;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__desc {
+    grid-column: 8 span;
+    color: var(--chernyy-70);
+    opacity: 0.75;
+    @include small-tablet {
+      grid-column: 1 span;
+    }
+    p {
+      max-width: 74rem;
+    }
+  }
+
+  &__img {
+    position: relative;
+    grid-column: 4 span;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    @include small-tablet {
+      grid-column: 1 span;
+      height: 30rem;
+    }
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
